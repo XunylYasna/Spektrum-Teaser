@@ -20,8 +20,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: encode({
-                'form-name': form.getAttribute('name'),
-                ...this.state,
+                'form-name': form.getAttribute('name')
             }),
         })
             .then(() => navigate(form.getAttribute('action')))
