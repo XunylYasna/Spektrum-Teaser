@@ -8,6 +8,11 @@ import { navigate } from 'gatsby-link'
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
 
+    const encode = (data) => {
+        return Object.keys(data)
+            .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+            .join('&')
+    }
     const handleSubmit = (e) => {
         e.preventDefault()
         const form = e.target
