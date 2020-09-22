@@ -3,10 +3,26 @@ import PropTypes from 'prop-types';
 import { Container, Burger, Menu, Input } from './sidebar.css'
 import TextLoop from 'react-text-loop'
 import Footer from '../../footer'
-
+import { navigate } from 'gatsby-link'
 
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        const form = e.target
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: encode({
+                'form-name': form.getAttribute('name'),
+                ...this.state,
+            }),
+        })
+            .then(() => navigate(form.getAttribute('action')))
+            .catch((error) => alert(error))
+    }
+
     return (
         <Container>
             <Burger isOpen={isOpen} onClick={toggleSidebar}>
@@ -29,10 +45,12 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                         </TextLoop>
                     </h1>
                     <p>Subscribe to our mailing list to get notified.</p>
-                    <form name="subscribe" method="POST" autoComplete="off" netlify-honeypot="bot-field" data-netlify="true">
+
+                    {/* Form */}
+                    <form name="subscribe" action="/" method="POST" autoComplete="off" netlify-honeypot="bot-field" data-netlify="true" onSubmit={handleSubmit}>
                         <Input>
                             <p className="hidden">
-                                <label>Don’t fill this out if you&aposre human: <input name="bot-field" /></label>
+                                <label>Don’t fill this out if you are human: <input name="bot-field" /></label>
                             </p>
                             <input placeholder=" " type="email" id="email" name="email" required></input>
                             <span className="highlight"></span>
