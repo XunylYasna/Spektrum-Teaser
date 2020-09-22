@@ -153,9 +153,6 @@ export const Menu = styled.div`
     width: 100vw !important;
     height: 100vh !important;
     background-color: var(--G400);
-
-    
-
   `}
 
   div.contact-container{
@@ -169,30 +166,36 @@ export const Menu = styled.div`
 
     ${({ isOpen }) => isOpen && `
     display: flex;
+    position: absolute;
     width: 100vw !important;
     height: auto;
     `}
 
-  h1{
-        font-size: 4rem;
-        font-family: var(--ff-secondary);
-        margin-bottom: 1rem;
-        span.space{
-            width: 10px;
-        }
-        
+    h1{
+      font-size: 4rem;
+      font-family: var(--ff-secondary);
+      margin-bottom: 1rem;
+      span.space{
+          width: 10px;
+      }
+    }
+
+    h3{
+      font-weight: 700;
     }
   }
 
   p{
     padding-top: 0.2rem;
     font-size: 2rem;
+    max-width: 95vw;
   }
 
   form{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    max-width: 95vw;
     
     ${MEDIA.MIN_TABLET`
         flex-direction: row;

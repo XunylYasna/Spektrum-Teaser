@@ -20,17 +20,20 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             <Menu isOpen={isOpen}>
                 <div className="contact-container">
                     <h1>We&apos;re always thinking about the future of <span className="space" />
-                        <TextLoop>
-                            <span>______________</span>
-                            <span>Design</span>
-                            <span>Advertising</span>
-                            <span>Technology</span>
-                            <span>Marketing</span>
+                        <TextLoop interval={1800}>
+                            <h3>______________</h3>
+                            <h3>Design</h3>
+                            <h3>Advertising</h3>
+                            <h3>Technology</h3>
+                            <h3>Marketing</h3>
                         </TextLoop>
                     </h1>
                     <p>Subscribe to our mailing list to get notified.</p>
-                    <form method="POST" autoComplete="off" data-netlify="true">
+                    <form name="subscribe" method="POST" autoComplete="off" netlify-honeypot="bot-field" data-netlify="true">
                         <Input>
+                            <p className="hidden">
+                                <label>Don’t fill this out if you&aposre human: <input name="bot-field" /></label>
+                            </p>
                             <input placeholder=" " type="email" id="email" name="email" required></input>
                             <span className="highlight"></span>
                             <span className="bar"></span>

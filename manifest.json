@@ -1,0 +1,15 @@
+{
+    "name": "Spektrum Design Co. || Infinite and Timeless",
+    "short_name": "Spektrum Design Co.",
+    "description": "Building timeless and infinite brands",
+    "theme_color": "#000",
+    "background_color": "#fff",
+    "pathPrefix": null,
+    "icon": "/src/images/icon.png",
+    "social": {
+        "facebook": "https://www.facebook.com/spektrumdesignco/",
+        "instagram": "https://www.instagram.com/spektrumdesignco/",
+        "linkedin": "https://www.linkedin.com/company/spektrumdesignco/",
+        "dribble": "https://dribbble.com/spektrumdesignco/about"
+    }
+}

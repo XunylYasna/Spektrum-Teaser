@@ -58,7 +58,7 @@ class Blob extends React.Component {
 
         function next(gen) {
             new $.TextureLoader().load(gen.next().value, (tex) => {
-                gsap.timeline({ onComplete() { next(gen) }, defaults: { duration: 0.5 } })
+                gsap.timeline({ onComplete() { next(gen) }, defaults: { duration: 0.3 } })
                     .to(group.scale, { x: 1.5, y: 1.5, z: 1.5 })
                     .to(group.rotation, { x: Math.PI, y: Math.PI }, '<')
                     .to(mat, {
