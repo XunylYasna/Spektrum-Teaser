@@ -6,10 +6,10 @@ export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4rem 8rem;
+  padding: 0rem 8rem;
   
   ${MEDIA.TABLET`
-  padding: 4rem 3rem;
+  padding: 0rem 3rem;
   `};
 
   a {
@@ -31,7 +31,7 @@ export const Logo = styled.img`
 
   ${({ show }) => show && `
     opacity:1;
-    width: 150px;
+    width: 110px;
     height: auto;
   `}
 `

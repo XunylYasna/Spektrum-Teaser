@@ -29,7 +29,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                         </TextLoop>
                     </h1>
                     <p>Subscribe to our mailing list to get notified.</p>
-                    <form method="POST" autoComplete="off">
+                    <form method="POST" autoComplete="off" data-netlify="true">
                         <Input>
                             <input placeholder=" " type="email" id="email" name="email" required></input>
                             <span className="highlight"></span>

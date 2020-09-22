@@ -38,5 +38,19 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Spektrum Design Co. Website`,
+        short_name: `Spektrum Design Co.`,
+        start_url: `/`,
+        description: `Building timeless and infinite brands`,
+        background_color: `#000`,
+        theme_color: `#a2466c`,
+        themeColor: `#fff`,
+        display: `standalone`,
+        icon: `src/images/icon.png`
+      },
+    },
   ],
 };

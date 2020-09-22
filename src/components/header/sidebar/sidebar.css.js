@@ -7,8 +7,8 @@ display:flex;
 
 export const Burger = styled.div`
   z-index:20;
-  width: 40px;
-  height: 30px;
+  width: 32px;
+  height: 26px;
   position: relative;
   background: transparent;
   margin: 50px auto;
@@ -55,12 +55,12 @@ export const Burger = styled.div`
 
     &:nth-child(3),
     &:nth-child(4){
-      top: 12px;
+      top: 8px;
     }
 
     &:nth-child(5),
     &:nth-child(6){
-      top: 24px;
+      top: 16px;
     }
     
     ${({ isOpen }) => isOpen && `
@@ -84,12 +84,12 @@ export const Burger = styled.div`
 
       &:nth-child(1) {
         left: 5px;
-        top: 11px;
+        top: 0px;
       }
 
       &:nth-child(2) {
         left: calc(50% - 3px);
-        top: 11px;
+        top: 0px;
       }
 
       &:nth-child(3) {
@@ -104,12 +104,12 @@ export const Burger = styled.div`
 
       &:nth-child(5) {
         left: 5px;
-        top: 22px;
+        top: 10px;
       }
 
       &:nth-child(6) {
         left: calc(50% - 3px);
-        top: 22px;
+        top: 10px;
       }
 
     `}
