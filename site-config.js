@@ -1,16 +1,17 @@
 const path = require('path');
 
 module.exports = {
-  siteTitle: `Gatsby Universal`,
-  siteTitleShort: `GatsbyU`,
-  siteDescription: `An opinionated starter for Gatsby.`,
-  siteUrl: `https://gu.fabianschultz.com`,
+  siteTitle: `Spektrum Design Co. Website`,
+  siteTitleShort: `Spektrum Design Co.`,
+  siteDescription: `Building timeless and infinite brands`,
+  siteUrl: `https://google.com/`,
   themeColor: `#000`,
   backgroundColor: `#fff`,
   pathPrefix: null,
   logo: path.resolve(__dirname, 'src/images/icon.png'),
   social: {
-    twitter: `gatsbyjs`,
-    fbAppId: `966242223397117`,
+    facebook: `https://www.facebook.com/spektrumdesignco/`,
+    instagram: `https://www.instagram.com/spektrumdesignco/`,
+    linkedin: `https://www.linkedin.com/company/spektrumdesignco/`
   },
 };

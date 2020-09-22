@@ -1,9 +1,50 @@
 import { createGlobalStyle } from 'styled-components';
-import { accent } from 'constants/theme';
+
 
 export default createGlobalStyle`
+
+:root {
+  /* Colors */
+  /* // Gray Scale (lightest to Darkets) */
+    --G100: #FFFFFF;
+    --G200: #6A6A6A;
+    --G300: #3D3D3D;
+    --G400: #000000;
+
+    /* // Logo Colors */
+    --BRIGHT_RED: #DB4437;
+    --STRONG_RED: #D8320A;
+    --BRIGHT_ORANGE: #FCBD30;
+    --VIVID_ORANGE: #FCB000;
+    --VIVID_YELLOW: #FFFF00;
+    --STRONG_GREEN: #2EC318;
+    --BRIGHT_GREEN: #31D095;
+    --VIVID_BLUE: #209AFA;
+    --LIGHT_BLUE: #8CBBFF;
+    --LIGHT_NAVY: #546AFA;
+    --STRONG_NAVY: #19188C;
+
+    /* // Pantone */
+    --P032C: #EF3340;
+    --P485C: #DA291C;
+    --P114C: #FDDA24;
+    --P130C: #F2A900;
+    --P3945C: #F3E500;
+    --P2421C: #31B700;
+    --P24112C: #48D597;
+    --P2925C: #009CDE;
+    --P2128C: #98B6E4;
+    --P299C: #546AFA;
+
+
+    --ff-primary: Helvetica,Times New Roman;
+    --ff-secondary: Helvetica Neue, "Heebo", sans-serif;
+    --ff-tertiary: League Gothic, "Oswald", sans-serif;
+    --ff-quaternary: Bebas Neue, sans-serif;
+}
+
   html, body, div, span, applet, object, iframe,
-  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre, 
   a, abbr, acronym, address, big, cite, code,
   del, dfn, em, img, ins, kbd, q, s, samp,
   small, strike, strong, sub, sup, tt, var,
@@ -31,6 +72,7 @@ export default createGlobalStyle`
 
   html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
   }
 
   body {
@@ -48,6 +90,19 @@ export default createGlobalStyle`
     font-variant-numeric: proportional-nums;
   }
 
+  .canvas-div{
+    overflow-x:hidden;
+    z-index: -1;
+    position: fixed;
+    margin-top: -25vh;
+  }
+  .canvas-div > canvas{
+    width: 100vw;
+    height: 100vh;
+  }
+  .canvas-div > canvas:focus{
+    outline:none;
+  }
   ol, ul {
     list-style: none;
   }
@@ -68,18 +123,17 @@ export default createGlobalStyle`
   }
 
   a {
-    color: ${accent};
+    color: '#333';
   }
 
   pre {
     display: block;
     padding: 2rem;
     margin-top: 4rem;
-    overflow: auto;
     font-size: 85%;
     line-height: 1.45;
     border-radius: 5px;
-    color: ${accent};
+    color: '#333';
     border: 1px solid #ddd;
     font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;
   }

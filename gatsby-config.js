@@ -29,5 +29,21 @@ module.exports = {
         },
       },
     },
+    // Styled components
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Add any options here
+      },
+    },
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        custom: {
+          families: ["Helvetica Neue, Bebas Neue, League Gothic, Helvetica"],
+          urls: ["/fonts/fonts.css"],
+        },
+      },
+    },
   ],
 };

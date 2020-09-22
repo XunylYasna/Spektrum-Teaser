@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import posed from 'react-pose';
-import { Container } from './header.css';
-import Title from 'components/title';
-import Nav from 'components/header/nav';
+import { Container, Logo } from './header.css';
+import Sidebar from 'components/header/sidebar'
+import logoNavBlack from '../../images/Logo_Black_Transparent.png'
+import logoNavWhite from '../../images//Logo_White_Transparent.png'
 
 // Example of a component-specific page transition
 const AnimatedContainer = posed.div({
@@ -22,17 +23,26 @@ const AnimatedContainer = posed.div({
   },
 });
 
-const Header = ({ title }) => (
-  <AnimatedContainer>
-    <Container>
-      <Link to="/">
-        <Title as="h1">{title}</Title>
-      </Link>
+const Header = ({ title }) => {
 
-      <Nav />
-    </Container>
-  </AnimatedContainer>
-);
+  const [isOpen, setIsOpen] = React.useState(false)
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen)
+  }
+
+  return (
+    <AnimatedContainer>
+      <Container>
+        <Link to="/" style={{ zIndex: 20 }}>
+          <Logo src={logoNavBlack} show={!isOpen} alt={title}></Logo>
+          <Logo src={logoNavWhite} show={isOpen} alt={title}></Logo>
+        </Link>
+
+        <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
+      </Container>
+    </AnimatedContainer>
+  )
+};
 
 Header.propTypes = {
   title: PropTypes.string.isRequired,
